@@ -2,36 +2,9 @@ import './App.css';
 
 import TasksList from './components/TasksList';
 
-function App() {
+import tasks from './data/tasks';
 
-  const tasks = [
-    {
-      id:1,
-      content: "Faire à manger",
-      status: 0,
-      createdAt : "2022-05-03"
-    },    {
-      id:1,
-      content: "Faire à manger",
-      status: 0,
-      createdAt : "2022-05-03"
-    },    {
-      id:1,
-      content: "Faire à manger",
-      status: 0,
-      createdAt : "2022-05-03"
-    },    {
-      id:1,
-      content: "Faire à manger",
-      status: 0,
-      createdAt : "2022-05-03"
-    },    {
-      id:1,
-      content: "Faire à manger",
-      status: 0,
-      createdAt : "2022-05-03"
-    },
-  ];
+function App() {
 
   return (
     <div className="App">

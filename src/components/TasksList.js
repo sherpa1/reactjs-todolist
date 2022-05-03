@@ -3,7 +3,7 @@ function TasksList({tasks}) {
     return (
       <div className="TasksList">
           <ul>
-            {tasks.map(task => <li onClick={()=>console.log("click")}>{task.id}</li>)}
+            {tasks.map(task => <li onClick={()=>console.log("click")}>{task.content}</li>)}
           </ul>
       </div>
     );
