@@ -1,9 +1,9 @@
-function TasksList() {
+function TasksList({tasks}) {
+
     return (
       <div className="TasksList">
           <ul>
-              <li>A task</li>
-              <li>An other task</li>
+            {tasks.map(task => <li onClick={()=>console.log("click")}>{task.id}</li>)}
           </ul>
       </div>
     );
