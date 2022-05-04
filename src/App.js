@@ -1,6 +1,6 @@
 import './App.css';
 
-import TasksList from './components/TasksList';
+import TDLTasksList from './components/TDLTasksList';
 
 import tasks from './data/tasks';
 
@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      <TasksList tasks={tasks}/>
+      <TDLTasksList tasks={tasks}/>
     </div>
   );
 }

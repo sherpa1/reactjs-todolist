@@ -1,7 +1,7 @@
-function TasksList({tasks}) {
+function TDLTasksList({tasks}) {
 
     return (
-      <div className="TasksList">
+      <div className="TDLTasksList">
           <ul>
             {tasks.map(task => <li onClick={()=>console.log("click")}>{task.content}</li>)}
           </ul>
@@ -9,4 +9,4 @@ function TasksList({tasks}) {
     );
   }
   
-  export default TasksList;
+  export default TDLTasksList;
