@@ -1,0 +1,114 @@
+/*--------------reset---------------*/
+* {
+    vertical-align: baseline;
+    font-weight: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    border: 0 none;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+blockquote,
+form,
+ul,
+ol,
+dl {
+    margin: 20px 0;
+}
+
+li,
+dd,
+blockquote {
+    margin-left: 40px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*--------------reset---------------*/
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    background-color: #ffff6b;
+}
+
+.TDLEditButton {
+    color: #1e88e5;
+}
+
+.TDLDeleteButton {
+    color: #e53935;
+}
+
+.TDLAddButton {
+    color: #43a047;
+}
+
+.TDLEditButton,
+.TDLDeleteButton,
+.TDLAddButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:6em;
+    height:6em;
+}
+
+.TDLButton {
+    width: 6em;
+    cursor: pointer;
+    border-radius: 0.4em;
+    margin: 0em;
+    text-align: center;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.TDLTaskItem:hover {
+    background-color: #ffb300;
+}
+
+.TDLTaskItem {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    background-color: #fdd835;
+    border-radius: 0.4em;
+}
+
+.TDLTaskItem div.buttons-row {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+
+.TDLTaskItem span {
+    text-align: center;
+    font-weight: 700;
+    padding: 0.3em;
+}
+
+.material-symbols-rounded {
+    font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 48;
+}
