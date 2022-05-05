@@ -3,22 +3,21 @@ import './App.css';
 import TDLTasksList from './components/TDLTasksList';
 import TDLButton from './components/TDLButton';
 
-import staticData from './data/tasks';
+// import staticData from './data/tasks';
 
 import React, { useState } from 'react';
+
+import { v4 as uuid } from 'uuid';
 
 function App() {
 
   const [tasks, setTasks] = useState([]);
 
-  function onClickAdd() {
-    console.log('add');
-    add_new_task();
-  }
 
   function add_new_task() {
-    setTasks([...tasks,{
-      id: get_next_id(),
+
+    setTasks([...tasks, {
+      id: uuid(),
       content: "Aller en courses",
       status: 1,
       started: "2022-05-02",
@@ -26,16 +25,21 @@ function App() {
     }]);
   }
 
-  function get_next_id(){
-    let next_id = 1;
-    tasks.map(task=> {if(next_id<=task.id) next_id = task.id+1});
-    return next_id;
+  function on_delete_task(id){
+    setTasks(tasks.filter(task=>task.id!==id));
   }
+  
+  function on_edit_task(id){
+    console.log('edit task')
+  }
+
 
   return (
     <div className="App">
-      <TDLTasksList tasks={tasks} />
-      <TDLButton label="Add" color="#43a047" icon="add" callback={onClickAdd} />
+
+      <TDLButton label="Add" color="#43a047" icon="add" callback={()=>add_new_task()} />
+      <TDLTasksList tasks={tasks} onDeleteTask={on_delete_task} onEditTask={on_edit_task} />
+
     </div>
   );
 }

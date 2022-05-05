@@ -4,17 +4,19 @@ import TDLSwitch from './TDLSwitch';
 
 const TDLTaskItem = (props)=> {
 
-    const [task, setTask] = useState(props);
+
+    const [task, setTask] = useState(props.task);
 
     useEffect(() => {
-        setTask(props);
-    },[props]);
+        setTask(props.task);
+    },[props.task]);
 
-    function onClickEdit() {
+    function onDelete() {
+        props.onDelete(task.id);
     }
-
-    function onClickDelete() {
-        console.log('delete');
+    
+    function onEdit() {
+        props.onEdit(task.id);
     }
 
     function onChangeValue(value) {
@@ -29,8 +31,8 @@ const TDLTaskItem = (props)=> {
             <span className='status'>{task.status ? "completed" : "to do"}</span>
             <div className='buttons-row'>
                 <TDLSwitch initialValue={task.status} callback={onChangeValue} />
-                <TDLButton icon="edit" label="Edit" color="#1e88e5" callback={onClickEdit} />
-                <TDLButton icon="delete" label="Delete" color="#e53935" callback={onClickDelete} />
+                <TDLButton icon="edit" label="Edit" color="#1e88e5" callback={onEdit} />
+                <TDLButton icon="delete" label="Delete" color="#e53935" callback={onDelete} />
             </div>
         </article>
     );

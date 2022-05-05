@@ -1,7 +1,7 @@
-function TDLButton({ label, icon, color, callback }) {
+function TDLButton({ label, icon, color,callback }) {
 
-    return (<div className="TDLButton" style={{color:color}}>
-        <span className="material-symbols-rounded" onClick={()=>callback()}>
+    return (<div className="TDLButton" style={{color:color}} onClick={()=>callback()}>
+        <span className="material-symbols-rounded">
             {icon}
         </span>
         <span>
